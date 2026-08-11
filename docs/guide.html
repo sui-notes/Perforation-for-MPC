@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Perforation for MPC — 使い方ガイド / User Guide</title>
+<style>
+  :root { color-scheme: light dark; }
+  body {
+    font-family: -apple-system, "Segoe UI", "Yu Gothic", "Meiryo", sans-serif;
+    line-height: 1.75; max-width: 760px; margin: 0 auto; padding: 32px 20px 80px;
+    color: #1a1a1a; background: #ffffff;
+  }
+  @media (prefers-color-scheme: dark) {
+    body { color: #e6e6e6; background: #161616; }
+    a { color: #8ab4f8; }
+    hr { border-color: #333; }
+  }
+  h1 { font-size: 1.5rem; border-bottom: 2px solid #1a1a1a; padding-bottom: 8px; }
+  h2 { font-size: 1.15rem; margin-top: 2em; }
+  h3 { font-size: 1rem; color: #767676; }
+  .updated { color: #767676; font-size: .9rem; }
+  hr { margin: 3em 0; border: none; border-top: 1px solid #e3e3e3; }
+  ul, ol { padding-left: 1.3em; }
+  code { background: rgba(128,128,128,.15); padding: 1px 5px; border-radius: 4px; }
+  .qa dt { font-weight: bold; margin-top: 1em; }
+  .qa dd { margin-left: 0; }
+</style>
+</head>
+<body>
+
+<!-- ===================== 日本語 ===================== -->
+<h1>Perforation for MPC — 使い方ガイド</h1>
+<p class="updated">最終更新日: 2026年8月11日 ／ <a href="#english">English version below</a></p>
+
+<p>Perforation for MPC は、スマホ (Android) から PC の動画プレイヤー <strong>MPC-HC / MPC-BE</strong> を操作するリモコンです。スマホの「アプリ」と、PC 側の「サーバー」の 2 つで動きます。</p>
+
+<h2>セットアップ (3 ステップ)</h2>
+<ol>
+  <li><strong>PC に MPC-HC (または MPC-BE) を入れる</strong><br>
+      すでに使っているならそのままで OK。未導入なら
+      <a href="https://github.com/clsid2/mpc-hc/releases">MPC-HC (無料)</a> をインストール。</li>
+  <li><strong>PC にサーバーを入れる</strong><br>
+      <a href="https://github.com/sui-notes/Perforation-for-MPC/releases/latest">最新版はこちら</a>。
+      インストーラー版 (推奨) か、インストール不要のポータブル ZIP 版を選べます。
+      起動するとタスクトレイに常駐し、MPC の設定は自動で行われます。<br>
+      <small>※ Microsoft Store 版も準備中です。</small></li>
+  <li><strong>スマホにアプリ「Perforation for MPC」を入れる</strong><br>
+      起動して「PC を自動検索」をタップすると、同じ Wi-Fi 上の PC が自動で見つかります。</li>
+</ol>
+
+<h2>動作要件</h2>
+<ul>
+  <li>Windows 10 (1809) 以降 / 64bit</li>
+  <li>MPC-HC または MPC-BE (64bit)</li>
+  <li>Android 8.0 以降のスマホ</li>
+  <li>PC とスマホが同じネットワーク (Wi-Fi) に接続されていること</li>
+</ul>
+
+<h2>基本の使い方</h2>
+<ul>
+  <li><strong>メイン画面</strong>: 再生/一時停止・前後ファイル・±10 秒・停止・フルスクリーン・再生速度・コマ送り・音量を操作できます。</li>
+  <li><strong>音声・字幕の切替</strong>: 画面に表示されている音声/字幕の行をタップすると次のトラックに切り替わります。</li>
+  <li><strong>ファイルブラウザ</strong>: 左上の ☰ から、PC 側で許可したフォルダを開いてタップ再生。対象フォルダは設定 (歯車) の「動画フォルダ (PC 側)」で増減できます。</li>
+  <li><strong>再生リスト</strong>: 画面最下部の「再生リスト n/m」をタップすると、再生中ファイルと同じフォルダの一覧から選べます。</li>
+  <li><strong>チャプター</strong>: チャプター入りの動画では進捗バーの下に現在チャプターが表示されます。タップで一覧、◀ ▶ で前後ジャンプ (Pro)。</li>
+</ul>
+
+<h2>Pro 機能 (買い切り)</h2>
+<ul>
+  <li><strong>チャプター操作</strong> — OP スキップや章ジャンプ</li>
+  <li><strong>連続再生</strong> — ファイル末尾で自動的に次のファイルへ</li>
+  <li><strong>ロック画面/通知での操作</strong> — 画面を消したまま再生操作</li>
+  <li><strong>Wake-on-LAN</strong> — スマホから PC の電源を入れる</li>
+</ul>
+
+<h2>トラブルシューティング</h2>
+<dl class="qa">
+  <dt>Q. 「PC が見つかりません」と出る</dt>
+  <dd>次を順に確認してください。<br>
+      ① PC とスマホが<strong>同じ Wi-Fi</strong> にいるか (ゲスト用 Wi-Fi や モバイル回線は不可)<br>
+      ② スマホ側の <strong>VPN アプリ (NordVPN 等) を一時オフ</strong>にする。VPN が検索の通信を遮ることがあります (VPN の設定で「ローカルネットワークの探索を許可」でも可)<br>
+      ③ PC 側の初回起動時に Windows ファイアウォールの許可ダイアログが出たら「許可」<br>
+      ④ それでも見つからない場合、アプリはネットワーク全体を数十秒かけてスキャンします。少し待ってから再試行してください。</dd>
+
+  <dt>Q. チャプターが表示されない</dt>
+  <dd>チャプター情報の読み取りには <strong>ffprobe</strong> (FFmpeg 付属) が必要です。PC のコマンドプロンプトで
+      <code>winget install Gyan.FFmpeg</code> を実行してから PC を再起動してください。
+      ffprobe が無くても他の機能は正常に動きます (チャプター行が出ないだけ)。</dd>
+
+  <dt>Q. Wake-on-LAN で PC が起きない</dt>
+  <dd>PC 側の <strong>BIOS/UEFI と LAN アダプタの設定で WOL を有効化</strong>する必要があります
+      (「Wake on LAN」「PME をオンにする」等。メーカーにより名称が異なります)。有線 LAN 接続の PC を推奨します。</dd>
+
+  <dt>Q. ダウンロード時に「WindowsによってPCが保護されました」と出る (SmartScreen)</dt>
+  <dd>GitHub 版はコード署名をしていないため表示されます。「詳細情報」→「実行」で起動できます。
+      配布物は本ページと同じ GitHub リポジトリからのみ提供しています。</dd>
+
+  <dt>Q. MPC は開いているのにリモコンが反応しない</dt>
+  <dd>サーバーより先に MPC を手動で起動していた場合、接続できないことがあります。
+      MPC をいったん閉じてから、アプリで再生操作をしてください (MPC が自動で立ち上がります)。</dd>
+</dl>
+
+<h2>よくある質問</h2>
+<dl class="qa">
+  <dt>Q. 通信は安全?</dt>
+  <dd>通信は<strong>自宅の LAN 内で完結</strong>します。外部サーバーは存在せず、アカウント登録も不要、データ収集もありません。
+      詳細は<a href="privacy-policy.html">プライバシーポリシー</a>をご覧ください。</dd>
+  <dt>Q. 料金は?</dt>
+  <dd>アプリ・サーバーとも無料で、基本機能はすべて使えます。上記の Pro 4 機能のみ買い切りのアプリ内購入です。</dd>
+</dl>
+
+<p>お問い合わせ: <code>orbit-notes.02@proton.me</code></p>
+
+<hr>
+
+<!-- ===================== English ===================== -->
+<h1 id="english">Perforation for MPC — User Guide</h1>
+<p class="updated">Last updated: August 11, 2026</p>
+
+<p>Perforation for MPC is an Android remote control for <strong>MPC-HC / MPC-BE</strong> on Windows. It consists of the phone <strong>app</strong> and a small <strong>PC server</strong>.</p>
+
+<h2>Setup (3 steps)</h2>
+<ol>
+  <li><strong>Install MPC-HC (or MPC-BE) on your PC</strong> — if you already use it, skip this.
+      Otherwise get <a href="https://github.com/clsid2/mpc-hc/releases">MPC-HC (free)</a>.</li>
+  <li><strong>Install the PC server</strong> —
+      <a href="https://github.com/sui-notes/Perforation-for-MPC/releases/latest">download the latest release</a>
+      (installer recommended, or the portable ZIP). It runs in the system tray and configures MPC automatically.<br>
+      <small>A Microsoft Store version is coming soon.</small></li>
+  <li><strong>Install the Android app "Perforation for MPC"</strong> — open it and tap
+      <em>Find my PC</em>. Your PC is discovered automatically on the same Wi-Fi.</li>
+</ol>
+
+<h2>Requirements</h2>
+<ul>
+  <li>Windows 10 (1809) or later, 64-bit</li>
+  <li>MPC-HC or MPC-BE (64-bit)</li>
+  <li>Android 8.0+</li>
+  <li>PC and phone on the same local network</li>
+</ul>
+
+<h2>Basics</h2>
+<ul>
+  <li><strong>Main screen</strong>: play/pause, previous/next file, ±10s, stop, fullscreen, playback speed, frame step, volume.</li>
+  <li><strong>Audio & subtitle tracks</strong>: tap the audio/subtitle rows to cycle tracks.</li>
+  <li><strong>File browser</strong>: open ☰ (top left) to browse the folders you allowed on the PC and tap to play. Manage folders in Settings → "Video folders (PC)".</li>
+  <li><strong>Playlist</strong>: tap the "Playlist n/m" bar at the bottom to pick from the current folder.</li>
+  <li><strong>Chapters</strong>: for videos with chapters, the current chapter appears under the progress bar. Tap for the list, ◀ ▶ to jump (Pro).</li>
+</ul>
+
+<h2>Pro features (one-time purchase)</h2>
+<ul>
+  <li><strong>Chapter controls</strong> — skip openings, jump between chapters</li>
+  <li><strong>Continuous playback</strong> — auto-advance to the next file</li>
+  <li><strong>Lock screen / notification controls</strong></li>
+  <li><strong>Wake-on-LAN</strong> — power on your PC from the phone</li>
+</ul>
+
+<h2>Troubleshooting</h2>
+<dl class="qa">
+  <dt>Q. "PC not found"</dt>
+  <dd>Check in order:<br>
+      ① PC and phone are on the <strong>same Wi-Fi</strong> (guest Wi-Fi / mobile data won't work)<br>
+      ② Temporarily <strong>turn off VPN apps (NordVPN etc.) on the phone</strong> — VPNs can swallow discovery traffic (or allow "local network discovery" in the VPN settings)<br>
+      ③ If Windows Firewall asks about the server on first launch, click Allow<br>
+      ④ If still not found, the app also scans the whole network — wait a bit and retry.</dd>
+
+  <dt>Q. Chapters don't appear</dt>
+  <dd>Reading chapters requires <strong>ffprobe</strong> (part of FFmpeg). Run
+      <code>winget install Gyan.FFmpeg</code> in Command Prompt, then restart the PC.
+      Everything else works fine without it.</dd>
+
+  <dt>Q. Wake-on-LAN doesn't wake the PC</dt>
+  <dd>WOL must be <strong>enabled in the PC's BIOS/UEFI and in the LAN adapter settings</strong>
+      ("Wake on LAN", "Enable PME", names vary). A wired connection is recommended.</dd>
+
+  <dt>Q. SmartScreen says "Windows protected your PC"</dt>
+  <dd>The GitHub build is not code-signed, so this warning appears. Click
+      "More info" → "Run anyway". Downloads are provided only from this GitHub repository.</dd>
+
+  <dt>Q. MPC is open but the remote doesn't respond</dt>
+  <dd>If MPC was started manually before the server, it may not be controllable.
+      Close MPC once, then start playback from the app (MPC relaunches automatically).</dd>
+</dl>
+
+<h2>FAQ</h2>
+<dl class="qa">
+  <dt>Q. Is it safe?</dt>
+  <dd>All communication stays <strong>inside your local network</strong>. There is no external server,
+      no account, and no data collection. See the <a href="privacy-policy.html">privacy policy</a>.</dd>
+  <dt>Q. Price?</dt>
+  <dd>The app and server are free with all core features. Only the four Pro features above are a one-time in-app purchase.</dd>
+</dl>
+
+<p>Contact: <code>orbit-notes.02@proton.me</code></p>
+
+</body>
+</html>

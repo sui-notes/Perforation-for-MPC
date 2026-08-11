@@ -35,6 +35,11 @@ Perforation for MPC は、PC の動画プレイヤー **MPC-HC / MPC-BE** を、
 - Android スマートフォン
 - スマホと PC が同じ Wi-Fi ネットワークに接続されていること
 
+### 使い方ガイド・困ったときは
+
+詳しい使い方とトラブルシューティング（PC が見つからない・チャプターが出ない等）は
+**[使い方ガイド](https://sui-notes.github.io/Perforation-for-MPC/guide.html)** をご覧ください。
+
 ### プライバシー
 
 このアプリは個人情報を収集・送信しません。詳細は [プライバシーポリシー](https://sui-notes.github.io/Perforation-for-MPC/privacy-policy.html) をご覧ください。
@@ -66,6 +71,11 @@ Perforation for MPC turns your phone into a remote control for the **MPC-HC / MP
 - A Windows PC with MPC-HC or MPC-BE installed
 - An Android phone
 - Both on the same Wi-Fi network
+
+### User guide & troubleshooting
+
+For detailed usage and troubleshooting (PC not found, chapters missing, etc.), see the
+**[User Guide](https://sui-notes.github.io/Perforation-for-MPC/guide.html#english)**.
 
 ### Privacy
 
