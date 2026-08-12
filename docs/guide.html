@@ -59,6 +59,9 @@
 
 <h2>基本の使い方</h2>
 <ul>
+  <li><strong>プレイヤーは自動で立ち上がります</strong>: MPC を開いていなくても、アプリで再生を押すか
+      ファイルをタップすれば、PC 側で MPC が自動起動してそのまま再生を始めます。
+      PC を操作しに行く必要はありません。うっかり MPC を閉じてしまっても、アプリを開けば復帰します。</li>
   <li><strong>メイン画面</strong>: 再生/一時停止・前後ファイル・±10 秒・停止・フルスクリーン・再生速度・コマ送り・音量を操作できます。</li>
   <li><strong>音声・字幕の切替</strong>: 画面に表示されている音声/字幕の行をタップすると次のトラックに切り替わります。</li>
   <li><strong>ファイルブラウザ</strong>: 左上の ☰ から、PC 側で許可したフォルダを開いてタップ再生。対象フォルダは設定 (歯車) の「動画フォルダ (PC 側)」で増減できます。</li>
@@ -71,7 +74,7 @@
   <li><strong>チャプター操作</strong> — OP スキップや章ジャンプ</li>
   <li><strong>連続再生</strong> — ファイル末尾で自動的に次のファイルへ</li>
   <li><strong>ロック画面/通知での操作</strong> — 画面を消したまま再生操作</li>
-  <li><strong>Wake-on-LAN</strong> — スマホから PC の電源を入れる</li>
+  <li><strong>Wake-on-LAN</strong> — スリープ中の PC をスマホから起こす（対応は PC の設定次第。下記参照）</li>
 </ul>
 
 <h2>トラブルシューティング</h2>
@@ -89,8 +92,13 @@
       ffprobe が無くても他の機能は正常に動きます (チャプター行が出ないだけ)。</dd>
 
   <dt>Q. Wake-on-LAN で PC が起きない</dt>
-  <dd>PC 側の <strong>BIOS/UEFI と LAN アダプタの設定で WOL を有効化</strong>する必要があります
-      (「Wake on LAN」「PME をオンにする」等。メーカーにより名称が異なります)。有線 LAN 接続の PC を推奨します。</dd>
+  <dd><strong>この機能はスリープ／休止状態からの復帰を想定しています。完全に電源を切った状態
+      (シャットダウン) からの起動は、多くの PC で動作しません。</strong><br>
+      スリープからでも起きない場合は、PC 側の <strong>BIOS/UEFI と LAN アダプタの設定で WOL を有効化</strong>
+      してください (「Wake on LAN」「PME をオンにする」等。メーカーにより名称が異なります)。
+      Windows の「高速スタートアップ」が有効だと妨げになることがあります。有線 LAN 接続の PC を推奨します。<br>
+      なお、ハードウェアや設定によっては<strong>どうしても動作しない場合があります</strong>。
+      その場合でも他の機能はすべて通常どおり使えます。</dd>
 
   <dt>Q. ダウンロード時に「WindowsによってPCが保護されました」と出る (SmartScreen)</dt>
   <dd>GitHub 版はコード署名をしていないため表示されます。「詳細情報」→「実行」で起動できます。
@@ -142,6 +150,9 @@
 
 <h2>Basics</h2>
 <ul>
+  <li><strong>The player starts itself</strong>: MPC doesn't have to be open. Hit play or tap a file in
+      the app and MPC launches on the PC and starts playing — no need to walk over to the PC.
+      Closed MPC by accident? Just open the app again and it comes back.</li>
   <li><strong>Main screen</strong>: play/pause, previous/next file, ±10s, stop, fullscreen, playback speed, frame step, volume.</li>
   <li><strong>Audio & subtitle tracks</strong>: tap the audio/subtitle rows to cycle tracks.</li>
   <li><strong>File browser</strong>: open ☰ (top left) to browse the folders you allowed on the PC and tap to play. Manage folders in Settings → "Video folders (PC)".</li>
@@ -154,7 +165,7 @@
   <li><strong>Chapter controls</strong> — skip openings, jump between chapters</li>
   <li><strong>Continuous playback</strong> — auto-advance to the next file</li>
   <li><strong>Lock screen / notification controls</strong></li>
-  <li><strong>Wake-on-LAN</strong> — power on your PC from the phone</li>
+  <li><strong>Wake-on-LAN</strong> — wake a sleeping PC from your phone (depends on your PC's settings, see below)</li>
 </ul>
 
 <h2>Troubleshooting</h2>
@@ -172,8 +183,12 @@
       Everything else works fine without it.</dd>
 
   <dt>Q. Wake-on-LAN doesn't wake the PC</dt>
-  <dd>WOL must be <strong>enabled in the PC's BIOS/UEFI and in the LAN adapter settings</strong>
-      ("Wake on LAN", "Enable PME", names vary). A wired connection is recommended.</dd>
+  <dd><strong>This feature is meant for waking a PC from sleep or hibernation. Starting a PC
+      from a full shutdown does not work on most machines.</strong><br>
+      If it won't wake from sleep either, enable WOL <strong>in the PC's BIOS/UEFI and in the LAN
+      adapter settings</strong> ("Wake on LAN", "Enable PME", names vary). Windows Fast Startup can
+      also block it. A wired connection is recommended.<br>
+      Depending on your hardware, it may simply not be supported — everything else still works.</dd>
 
   <dt>Q. SmartScreen says "Windows protected your PC"</dt>
   <dd>The GitHub build is not code-signed, so this warning appears. Click
