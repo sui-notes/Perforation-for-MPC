@@ -24,10 +24,12 @@ Perforation for MPC は、PC の動画プレイヤー **MPC-HC / MPC-BE** を、
 
 ### ダウンロード
 
-- **PC 用サーバー**: [最新リリース](https://github.com/sui-notes/Perforation-for-MPC/releases/latest)
-  - `Perforation-Server-Setup-vX.X.X.exe` … インストーラー版（一般の方向け・推奨）
+- **PC 用サーバー（Microsoft Store・推奨）**: [Microsoft Store で入手](https://apps.microsoft.com/detail/9NT52T3RHR46)
+  — 署名済みなので SmartScreen の警告なしで入ります
+- **PC 用サーバー（GitHub）**: [最新リリース](https://github.com/sui-notes/Perforation-for-MPC/releases/latest)
+  - `Perforation-Server-Setup-vX.X.X.exe` … インストーラー版
   - `Perforation-Server-vX.X.X-portable.zip` … ポータブル版（解凍して実行）
-- **Android アプリ**: Google Play（準備中）
+- **Android アプリ**: [Google Play で入手](https://play.google.com/store/apps/details?id=jp.perforation)
 
 ### 動作環境
 
@@ -61,10 +63,12 @@ Perforation for MPC turns your phone into a remote control for the **MPC-HC / MP
 
 ### Downloads
 
-- **PC server**: [latest release](https://github.com/sui-notes/Perforation-for-MPC/releases/latest)
-  - `Perforation-Server-Setup-vX.X.X.exe` — installer (recommended)
+- **PC server (Microsoft Store, recommended)**: [Get it from the Microsoft Store](https://apps.microsoft.com/detail/9NT52T3RHR46)
+  — signed, so no SmartScreen warning
+- **PC server (GitHub)**: [latest release](https://github.com/sui-notes/Perforation-for-MPC/releases/latest)
+  - `Perforation-Server-Setup-vX.X.X.exe` — installer
   - `Perforation-Server-vX.X.X-portable.zip` — portable (unzip and run)
-- **Android app**: Google Play (coming soon)
+- **Android app**: [Get it on Google Play](https://play.google.com/store/apps/details?id=jp.perforation)
 
 ### Requirements
 
